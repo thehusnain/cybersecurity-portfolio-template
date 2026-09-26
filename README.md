@@ -1,87 +1,17 @@
-# 🛡️ Cyber Security Portfolio Template
+# Husnain Fiaz — Fsociety portfolio
 
-A stunning, high-performance portfolio template designed specifically for cybersecurity professionals, red teamers, and security researchers. This portfolio features a modern "hacker" aesthetic with glitch effects, dynamic backgrounds, and specialized sections for showcasing your security expertise.
+Five-route React portfolio using Urbanist, GSAP ScrollTrigger, Lenis, and Three.js. Site content lives in `components/portfolio/data.ts`. Styling lives in `app/globals.css`. Downloaded GLB models and licenses are in `public/models`.
 
-## ✨ Key Features
+## Local development
 
-- **⚡ Blazing Fast**: Built with React + Vite for optimal performance and rapid development.
-- **🎨 Hacker Aesthetic**: Premium dark theme with vibrant neon accents and glassmorphism.
-- **👾 Glitch Effects**: Interactive glitch headers and animations that give a "terminal" feel.
-- **🚩 Dedicated CTF Page**: Showcase your competition rankings, team achievements, and solve counts.
-- **📜 Certifications**: Display your professional achievements and learning paths with dedicated cards.
-- **🛠️ Specialized Sections**:
-  - **About Me**: Professional introduction and background.
-  - **Skills**: Interactive skill display (TryHackMe stats, etc.).
-  - **Experience**: Clean timeline of your career path.
-  - **Projects**: Showcase your security tools and research.
-  - **Contact**: Integrated contact form and social media links.
-- **📱 Responsive Design**: Fully optimized for desktop, tablet, and mobile viewing.
+Use Node.js 22.13 or newer and pnpm. Run `pnpm install`, then `pnpm dev`. Open the local URL printed by the development server. `pnpm build` creates the production build. A Sites deployment configuration is included; deployment requires your own authorised account.
 
----
+The navbar switches between Dark and Red and remembers the choice on the device. The profile starts with the mask; hover, keyboard focus, or tap reveals Husnain. Scroll scenes are reversible. Reduced-motion preferences show the content without pinned animations. The sourced models use WebGL, with SVG geometry rendering as a fallback when WebGL is unavailable.
 
-## 🛠️ Getting Started
+## Content notes
 
-Follow these steps to set up your own version of this portfolio.
+Certificates and CTF evidence come from the provided data.zip. Duplicate images were merged. The blank appreciation certificate and Cisco certificate addressed to Husnain Ali were excluded. The Hack4Bug team screenshot contains a team passcode and is excluded from the distributed website. Fourth place at the Ignite workshop is based on Husnain's supplied statement; the certificate itself confirms the workshop and date. The Ramadan event folder says 2025, but its team screenshot says Ramadan CTF 2026; the page labels the scoreboard as archived, not a newly verified final result.
 
-### 1. Prerequisites
-- [Node.js](https://nodejs.org/) (v16.x or later)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+WebRekon and VulnSpectra descriptions and GitHub links were checked against their repository READMEs. No unverified live demos, invented achievements, or numeric counters are used. Discord usernames cannot provide a reliable direct profile URL, so its control copies sheriffsec.
 
-### 2. Installation
-Clone the repository and install the dependencies:
-```bash
-git clone https://github.com/yourusername/your-portfolio.git
-cd your-portfolio
-npm install
-```
-
-### 3. Development
-Run the development server locally:
-```bash
-npm run dev
-```
-Open `http://localhost:5173` in your browser to see the results.
-
-### 4. Build
-To build for production:
-```bash
-npm run build
-```
-
----
-
-## 🎨 Customization Guide
-
-This project is built to be easily customizable. Here's where you can make changes:
-
-### Updating Personal Info
-- **Main Content**: Modify `src/components/` and `src/pages/` to update text, descriptions, and achievements.
-- **Navigation**: Update labels and paths in `src/components/Navigation.jsx`.
-
-### Assets & Images
-- Replace images in `public/assets/` and `src/assets/` with your own (profile picture, certificates, CTF screenshots).
-- **Profile Image**: Update `public/assets/profile.png`.
-- **Certificates**: Update `public/assets/` and the links in `src/pages/CertificatesPage.jsx`.
-- **CTFs**: Update `public/assets/ctfs/` and descriptions in `src/pages/CtfsPage.jsx`.
-
-### Colors & Styling
-- Edit `src/index.css` and `src/App.css` to customize the primary colors (default is neon green `#00FF8C`).
-- Component-specific styles are located in their respective `.css` files within `src/components/` and `src/pages/`.
-
----
-
-## 🚀 Deployment
-
-The easiest way to deploy this portfolio is using [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/):
-
-1. Connect your GitHub repository.
-2. Set the build command to `npm run build`.
-3. Set the output directory to `dist`.
-4. Deploy!
-
----
-
-## 📄 License
-This project is open-source and available under the MIT License. Feel free to use it as a template for your own amazing portfolio!
-
-Made with ❤️ by [Husnain](https://github.com/thehusnain)
+Model attribution is linked in the footer. All certificate images open in an accessible dialog and are available as full-size images.
