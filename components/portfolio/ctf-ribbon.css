@@ -1,0 +1,46 @@
+.ctf-ribbon{position:relative;z-index:2;background:var(--bg);color:var(--text);font-family:var(--font-site);pointer-events:auto;scroll-margin-top:0}
+.ctr-track{position:relative}.ctr-stage{position:relative;min-height:100svh;padding:0 5.4% 32px;isolation:isolate}
+.ctr-top{height:72px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:4}.ctr-top nav{display:flex;gap:29px;font-size:14px;color:var(--muted)}.ctr-top nav a:hover{color:var(--text)}
+.ctr-heading{position:relative;z-index:3;transform-origin:left top;margin-top:14px}.ctr-heading h2{font-size:clamp(44px,5.6vw,88px);font-weight:400;line-height:1.03;letter-spacing:-.035em;margin:0}.ctr-heading h2 span{display:inline}
+.ctr-canvas{display:none;position:absolute;inset:0;width:100%;height:100svh;z-index:2;pointer-events:none}
+.ctr-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 20px;max-width:1200px;width:100%;margin:30px auto 0;position:relative;z-index:3}
+.ctf-ribbon .ctr-card{display:flex;flex-direction:column;min-width:0;min-height:0;padding:7px 7px 0;background:var(--surface);border:1px solid var(--line);border-radius:4px;text-align:left;font-family:inherit;color:var(--text);overflow:hidden;pointer-events:auto;transition:border-color .2s,background-color .2s}
+.ctr-card:hover,.ctr-card:focus-visible{border-color:var(--muted);background:var(--raised)}.ctr-card:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.ctr-image{display:block;position:relative;aspect-ratio:2.7;min-height:0;overflow:hidden;background:var(--bg)}.ctr-image img{width:100%;height:100%;object-fit:contain;max-width:none}
+.ctr-card-copy{display:block;padding:8px 5px 10px;flex-shrink:0;min-width:0}.ctr-card-title{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:18px;font-weight:500;letter-spacing:-.02em;line-height:1.2}.ctr-card-title>span{font-size:15px;color:var(--muted)}.ctr-card-meta{display:block;margin-top:4px;color:var(--muted);font-size:12px;line-height:1.4}
+/* A one-viewport overlap keeps the outgoing certificate canvas in the same scene. */
+.ctf-ribbon.ctr-animated:not(.ctr-reduced){margin-top:-100svh;background:transparent}
+.ctr-animated:not(.ctr-reduced) .ctr-track{height:650svh}
+.ctr-animated:not(.ctr-reduced) .ctr-stage{position:sticky;top:0;height:100svh;min-height:100svh}
+.ctr-animated:not(.ctr-reduced) .ctr-stage:before{content:'';position:absolute;inset:0;background:var(--bg);opacity:var(--ctr-backdrop,0);z-index:0;pointer-events:none}
+.ctr-animated:not(.ctr-reduced) .ctr-top{opacity:var(--ctr-header,0)}
+.ctr-animated:not(.ctr-reduced) .ctr-heading{position:absolute;top:27svh;left:5.4%;margin:0;pointer-events:none}
+.ctr-animated:not(.ctr-reduced) .ctr-heading h2 span{display:block}
+.ctr-animated:not(.ctr-reduced) .ctr-canvas{display:block}
+.ctr-animated:not(.ctr-reduced) .ctr-grid{position:absolute;top:180px;bottom:30px;left:5.4%;right:5.4%;width:auto;margin:0 auto;grid-template-rows:repeat(3,minmax(0,1fr))}
+.ctr-animated:not(.ctr-reduced) .ctr-image{flex:1;aspect-ratio:auto}
+.ctr-skip{position:absolute;left:5.4%;top:76px;z-index:6;padding:10px 16px;background:var(--text);color:var(--bg);clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap}.ctr-skip:focus{clip-path:none;width:auto;height:auto}
+.ctr-top a:focus-visible{outline:2px solid var(--text);outline-offset:5px}
+html.ctf-detail-open .navbar,html.ctf-detail-open .web-spider-canvas{visibility:hidden;pointer-events:none}
+.ctr-evidence .ctr-evidence-image{max-height:55svh;object-fit:contain;width:100%}.ctr-evidence-description{font-size:14px;line-height:1.55;color:var(--muted)}.ctr-evidence-choices{display:flex;flex-wrap:wrap;gap:8px}.ctr-evidence-choices button{font:inherit;font-size:13px;line-height:1.5;padding:7px 12px;border:1px solid var(--line);border-radius:4px;color:var(--muted)}.ctr-evidence-choices button[aria-pressed=true]{border-color:var(--text);color:var(--text)}
+@media(max-height:760px) and (min-width:701px){.ctr-top{height:60px}.ctr-animated:not(.ctr-reduced) .ctr-grid{top:178px;bottom:24px;gap:14px 20px}.ctr-card-copy{padding:7px 4px 8px}.ctr-card-title{font-size:17px}}
+@media(max-width:700px){
+  .ctr-stage{padding:0 6% 40px}.ctr-top{height:70px}.ctr-top .brand{font-size:24px}.ctr-top nav{gap:15px;font-size:12px}.ctr-top nav a:last-child{display:none}
+  .ctr-heading h2{font-size:52px}.ctr-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 12px;margin-top:28px}.ctr-image{aspect-ratio:1.55}.ctr-card-copy{padding:9px 3px 11px}.ctr-card-title{font-size:17px;gap:4px}.ctr-card-title>span{display:none}
+  .ctr-animated:not(.ctr-reduced) .ctr-track{height:calc(550svh + 1160px)}
+  .ctr-animated:not(.ctr-reduced) .ctr-stage{height:1160px}
+  .ctr-animated:not(.ctr-reduced) .ctr-heading{top:18svh;left:6%}
+  .ctr-animated:not(.ctr-reduced) .ctr-grid{top:178px;bottom:30px;left:6%;right:6%;grid-template-rows:repeat(5,minmax(0,1fr));gap:14px 12px}
+  .ctr-evidence .ctr-evidence-image{max-height:48svh}
+}
+@media(prefers-reduced-motion:reduce){.ctf-ribbon.ctr-reduced{margin-top:0}.ctf-ribbon .ctr-track{height:auto}.ctf-ribbon .ctr-stage{position:relative;height:auto}.ctf-ribbon .ctr-canvas{display:none}.ctf-ribbon .ctr-heading{transform:none!important}.ctf-ribbon .ctr-grid{opacity:1!important}}
+.ctr-animated:not(.ctr-reduced).ctr-title-settled .ctr-heading h2 span{display:inline}
+@media(min-width:701px){.ctr-animated:not(.ctr-reduced) .ctr-stage{height:max(100svh,calc(190px + var(--ctr-rows,3)*150px))}.ctr-animated:not(.ctr-reduced) .ctr-grid{grid-template-rows:repeat(var(--ctr-rows,3),minmax(0,1fr))}}
+/* Continue the outgoing chapter's backing surface beneath the overlap. */
+#certifications:has(+.ctf-ribbon.ctr-animated:not(.ctr-reduced)):after{content:'';position:absolute;top:100%;left:0;right:0;height:150svh;background:var(--bg);z-index:-1;pointer-events:none}
+
+.ctf-ribbon:not(.ctr-animated) .ctr-stage,.ctf-ribbon.ctr-reduced .ctr-stage{padding-top:100px}
+
+/* Keep the original CTF choreography inside the shared navigation's visible viewport. */
+.ctr-canvas{top:86px;height:calc(100svh - 86px)}
+@media(max-width:700px){.ctr-canvas{top:70px;height:calc(100svh - 70px)}}

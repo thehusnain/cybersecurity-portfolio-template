@@ -1,0 +1,152 @@
+/* Three chapters share a thread; their content and movement have distinct compositions. */
+.motion-projects,.motion-internships,.cyber-contact{position:relative;scroll-margin-top:80px;isolation:isolate}
+.chapter-thread{position:absolute;top:0;left:7%;width:1px;height:76px;background:var(--line);pointer-events:none}
+.chapter-thread span{display:block;height:100%;background:var(--accent)}
+.motion-projects{height:auto;min-height:100svh;padding:130px 7% 100px;border-bottom:1px solid var(--line);overflow:clip}
+.motion-projects .section-head{margin-bottom:50px}
+.motion-projects .section-head h2{font-size:clamp(30px,3.4vw,52px);max-width:18ch}
+.motion-projects .project-grid{gap:30px;align-items:stretch;margin:0;perspective:1400px}
+.motion-projects .project-card{display:flex;flex-direction:column;transform-style:preserve-3d}
+.motion-projects .project-front{padding:0 28px 27px;background:var(--raised);border-radius:5px 5px 0 0}
+.project-windowbar{display:flex;align-items:center;gap:16px;height:50px;border-bottom:1px solid var(--line);margin-bottom:24px}
+.window-lights{display:flex;gap:5px}.window-lights i{width:5px;height:5px;border:1px solid var(--muted);border-radius:50%}.window-lights i:first-child{background:var(--accent);border-color:var(--accent)}
+.project-windowbar .eyebrow{font-size:10px;letter-spacing:1px}.project-index{margin-left:auto;font-size:11px;color:var(--muted)}
+.motion-projects .project-front h3{font-size:clamp(25px,2.8vw,40px);line-height:1.2;margin:0 0 14px;align-items:center}
+.motion-projects .project-front h3 svg{color:var(--accent);flex-shrink:0}
+.motion-projects .project-front>p{font-size:14px;max-width:40ch}
+.project-trace{position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--accent)}
+.motion-projects .project-fold{padding:0 28px;flex:1;border-radius:0 0 5px 5px;transform-origin:top;backface-visibility:visible}
+.motion-projects .project-fold>p{font-size:15px;max-width:48ch;padding-top:25px}
+.motion-projects .project-tech{padding:24px 0 28px}
+.motion-projects .project-tech .eyebrow{display:block}
+.motion-projects .project-tech .arrow-link{margin-top:18px}
+.motion-internships{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,2fr);gap:6%;padding:130px 7% 110px;perspective:none;border-bottom:1px solid var(--line);overflow:clip}
+.motion-internships>.section-head{position:sticky;top:125px;align-self:start}
+.motion-internships .section-head h2{font-size:clamp(30px,3.4vw,52px);line-height:1.15;max-width:10ch}
+.internship-ledger{position:relative;display:grid;gap:76px;min-width:0;padding-left:25px}
+.ledger-rail{position:absolute;left:0;top:0;bottom:0;width:1px;background:var(--line)}
+.ledger-progress{display:block;width:1px;height:100%;background:var(--accent)}
+.motion-internships .internship-card{position:relative;grid-template-columns:1fr;margin:0;transform-style:flat;box-shadow:none;background:transparent;border:0}
+.ledger-node{position:absolute;left:-29px;top:5px;width:9px;height:9px;border:1px solid var(--accent);background:var(--accent);border-radius:50%}
+.motion-internships .internship-copy{padding:0 0 28px}
+.motion-internships .internship-copy h3{font-size:clamp(25px,2.4vw,35px);max-width:20ch}
+.motion-internships .internship-copy>p{max-width:55ch;font-size:15px}
+.motion-internships .internship-copy .eyebrow{font-size:10px;letter-spacing:1px}
+.motion-internships .internship-copy .arrow-link{font-size:13px;margin-top:16px}
+.motion-internships .internship-proof{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:30px;padding:24px;min-width:0;border:1px solid var(--line);border-radius:4px;background:var(--surface);text-align:left}
+.motion-internships .internship-proof img{max-height:230px;filter:none;object-position:center;transform:none}
+.motion-internships .internship-proof>span{font-size:14px;max-width:none;line-height:1.5;padding:0;gap:12px;align-self:center;color:var(--text);justify-content:space-between}
+.motion-internships .internship-proof:hover{border-color:var(--accent)}
+.cyber-contact{padding:130px 7% 100px;perspective:1200px}
+.cyber-contact .contact-intro{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:32px}
+.cyber-contact h2{font-size:32px;line-height:1.2;font-weight:500;letter-spacing:-.035em;margin:14px 0 0}
+.cyber-contact h2>span{color:var(--accent);animation:none}
+.contact-intro p{max-width:40ch;font-size:14px;color:var(--muted);line-height:1.6}
+.contact-console{border:1px solid var(--line);border-radius:6px;background:var(--surface);overflow:hidden;box-shadow:0 24px 70px #0002}
+.console-bar,.console-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 26px;background:var(--raised);font-size:11px;letter-spacing:1px;color:var(--muted)}
+.console-bar{border-bottom:1px solid var(--line)}.console-bar>span:first-child{display:flex;align-items:center;gap:10px;color:var(--text)}.console-bar svg{color:var(--accent)}
+.console-body{display:grid;grid-template-columns:1.1fr 1fr;min-width:0}
+.contact-mail,.contact-networks{padding:38px;min-width:0}.contact-mail{border-right:1px solid var(--line)}
+.contact-mail>.eyebrow{display:flex;align-items:center;gap:9px;font-size:10px}
+.contact-address{display:block;width:fit-content;font-size:clamp(20px,2.2vw,31px);line-height:1.5;margin:22px 0 26px;letter-spacing:-1px;overflow-wrap:anywhere}
+.contact-address span{display:block;color:var(--muted)}
+.contact-address:hover{color:var(--accent)}
+.contact-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.contact-send,.contact-copy{display:flex;align-items:center;justify-content:center;gap:10px;font-size:12px;padding:11px 15px;min-height:44px;border-radius:3px}
+.contact-send{background:var(--text);color:var(--bg)}.contact-send:hover{background:var(--accent)}
+.contact-copy{border:1px solid var(--line);color:var(--muted)}.contact-copy:hover{color:var(--text);border-color:var(--muted)}
+.contact-networks>.eyebrow{font-size:10px;margin-bottom:20px}
+.contact-networks .social-set{display:grid;gap:0;padding:0;white-space:normal}
+.contact-networks .social-set a,.contact-networks .social-set button{display:flex;width:100%;min-height:44px;padding:12px 0;border-bottom:1px solid var(--line);font-size:13px;text-align:left}
+.contact-networks .social-set svg{width:15px;height:15px;flex-shrink:0}.contact-networks .social-arrow{margin-left:auto;opacity:1}
+.console-bottom{border-top:1px solid var(--line);font-size:9px;padding-block:12px;background:transparent}
+.console-bottom svg{width:120px;height:16px;overflow:visible;flex-shrink:0}.console-bottom path{fill:none;stroke:var(--line);stroke-width:1}.console-bottom .connection-trace{stroke:var(--accent);stroke-dasharray:100;stroke-dashoffset:0}.console-bottom circle{fill:var(--accent)}
+@media(max-width:1000px){
+  .motion-internships{grid-template-columns:minmax(0,.7fr) minmax(0,1.5fr);gap:5%}
+  .motion-internships .internship-proof{grid-template-columns:1fr}.motion-internships .internship-proof>span{max-width:none;justify-content:space-between}
+  .contact-mail,.contact-networks{padding:28px}.contact-address{font-size:24px}
+}
+@media(max-width:700px){
+  .chapter-thread{left:6%;height:52px}
+  .motion-projects{min-height:0;padding:90px 6% 65px}
+  .motion-projects .section-head{margin-bottom:30px}.motion-projects .section-head h2{font-size:30px}
+  .motion-projects .project-grid{gap:24px}.motion-projects .project-front{padding:0 20px 22px}.motion-projects .project-front h3{font-size:28px}
+  .project-windowbar{gap:10px}.project-windowbar .eyebrow{font-size:9px;letter-spacing:.5px}
+  .motion-projects .project-fold{padding:0 20px}.motion-projects .project-fold>p{font-size:14px}.motion-projects .tags span{font-size:11px}
+  .motion-internships{display:block;padding:90px 6% 65px}.motion-internships>.section-head{position:static;margin-bottom:40px}.motion-internships .section-head h2{font-size:30px;max-width:18ch}
+  .internship-ledger{gap:48px;padding-left:21px}.ledger-node{left:-25px}
+  .motion-internships .internship-copy h3{font-size:27px}.motion-internships .internship-copy .eyebrow{font-size:9px;letter-spacing:.5px}
+  .motion-internships .internship-proof{padding:15px;gap:15px}.motion-internships .internship-proof img{max-height:245px}
+  .cyber-contact{padding:90px 6% 65px}.cyber-contact .contact-intro{display:block;margin-bottom:25px}.cyber-contact h2{font-size:28px}.contact-intro p{font-size:13px;margin-top:18px}
+  .console-bar,.console-bottom{padding-inline:18px;gap:10px}.console-protocol{font-size:9px;letter-spacing:.5px}
+  .console-body{grid-template-columns:1fr}.contact-mail,.contact-networks{padding:25px 20px}.contact-mail{border-right:0;border-bottom:1px solid var(--line)}
+  .contact-address{font-size:24px;margin:18px 0 23px}.contact-actions{gap:10px}.contact-send,.contact-copy{font-size:11px;padding-inline:12px}
+  .console-bottom{font-size:8px;letter-spacing:0}.console-bottom svg{width:75px}.contact-networks .social-row .social-arrow{display:block}
+}
+@media(prefers-reduced-motion:reduce){.chapter-thread span,.ledger-progress{transform:none}.cyber-contact h2>span{animation:none}}
+
+/* Keep motion active while the chapters are being read. */
+.cyber-contact{perspective:none}
+.contact-console{position:relative}
+.console-scan{position:absolute;top:50px;left:0;right:0;height:1px;background:var(--accent);box-shadow:0 0 12px var(--accent);opacity:0;pointer-events:none;z-index:2}
+.cyber-contact .contact-address{white-space:nowrap;font-size:clamp(13px,1.4vw,20px);letter-spacing:-.5px;overflow-wrap:normal}
+.cyber-contact .contact-address span{display:inline}
+@media(min-width:900px) and (min-height:620px){
+  .motion-projects{padding-top:108px;padding-bottom:40px}
+  .motion-projects .section-head{margin-bottom:24px}
+  .motion-projects .section-head h2{font-size:36px;max-width:none;margin-top:12px}
+  .project-viewport{width:100%;perspective:1400px}
+  .motion-projects .project-grid{display:grid;width:auto;gap:32px}
+  .motion-projects .project-card{width:auto}
+  .motion-projects .project-front{padding-bottom:18px}
+  .motion-projects .project-windowbar{height:34px;margin-bottom:18px}
+  .motion-projects .project-front h3{font-size:30px;margin-bottom:10px}
+  .motion-projects .project-front>p{font-size:13px;max-width:none}
+  .motion-projects .project-fold>p{font-size:14px;max-width:70ch;padding-top:18px}
+  .motion-projects .project-tech{padding:14px 0 18px}
+  .motion-projects .project-tech .arrow-link{margin-top:10px}
+}
+@media(max-width:700px){.cyber-contact .contact-address{font-size:clamp(12px,3.9vw,16px)}}
+@media(prefers-reduced-motion:reduce){
+  .console-scan{display:none}
+  .motion-projects .project-grid{display:grid;width:auto}
+  .motion-projects .project-card{width:auto}
+}
+
+/* Authored, pinned spatial chapters. Static and reduced-motion content stays in document flow. */
+@media(min-width:900px) and (min-height:620px){
+  [data-motion-mode=cinematic]{height:100svh;min-height:100svh;overflow:clip;box-sizing:border-box}
+  .motion-projects[data-motion-mode=cinematic]{padding:105px 7% 30px}
+  .motion-projects[data-motion-mode=cinematic] .project-viewport{perspective:1800px}
+  .motion-projects[data-motion-mode=cinematic] .project-grid{transform-style:preserve-3d;grid-template-columns:1fr 1fr;gap:28px}
+  .motion-projects[data-motion-mode=cinematic] .project-card{transform-style:preserve-3d}
+  .motion-projects[data-motion-mode=cinematic] .project-front,.motion-projects[data-motion-mode=cinematic] .project-fold{backface-visibility:visible;transform-style:preserve-3d}
+  .motion-projects[data-motion-mode=cinematic] .project-front{position:relative;z-index:2}
+  .motion-projects[data-motion-mode=cinematic] .project-fold{position:relative;z-index:1}
+  .motion-projects[data-motion-mode=cinematic] .project-fold>p{line-height:1.5}
+  .motion-projects[data-motion-mode=cinematic] .project-tech{padding-top:12px;padding-bottom:15px}
+  .motion-projects[data-motion-mode=cinematic] .tags span{font-size:11px}
+  .motion-internships[data-motion-mode=cinematic]{display:block;padding:105px 7% 30px}
+  .motion-internships[data-motion-mode=cinematic]>.section-head{position:relative;top:0;margin-bottom:26px}
+  .motion-internships[data-motion-mode=cinematic] .section-head h2{font-size:36px;max-width:none;margin-top:12px}
+  .motion-internships[data-motion-mode=cinematic] .internship-ledger{display:block;padding:0;height:calc(100svh - 225px);perspective:1800px;transform-style:preserve-3d}
+  .motion-internships[data-motion-mode=cinematic] .internship-card{position:absolute;inset:0;display:grid;grid-template-columns:1.4fr 1fr;gap:30px;padding:22px;border:1px solid var(--line);border-radius:5px;background:var(--surface);transform-style:preserve-3d}
+  .motion-internships[data-motion-mode=cinematic] .internship-copy{padding:0;align-self:center}
+  .motion-internships[data-motion-mode=cinematic] .internship-copy h3{font-size:27px;max-width:none;margin:12px 0 10px}
+  .motion-internships[data-motion-mode=cinematic] .internship-copy>p{font-size:14px;line-height:1.5}
+  .motion-internships[data-motion-mode=cinematic] .internship-copy>p:not(.internship-role):not(.quiet){margin:14px 0}
+  .motion-internships[data-motion-mode=cinematic] .internship-copy .arrow-link{margin-top:10px;font-size:12px}
+  .motion-internships[data-motion-mode=cinematic] .internship-proof{display:flex;flex-direction:column;gap:15px;justify-content:center;padding:18px;background:var(--raised);border-radius:3px;transform-style:preserve-3d}
+  .motion-internships[data-motion-mode=cinematic] .internship-proof img{max-height:calc(100svh - 345px);object-position:center}
+  .motion-internships[data-motion-mode=cinematic] .internship-proof>span{font-size:12px;align-self:stretch;justify-content:space-between}
+  .motion-internships[data-motion-mode=cinematic] .ledger-node{display:none}
+  .motion-internships[data-motion-mode=cinematic] .ledger-rail{left:0;right:0;top:auto;bottom:-10px;height:1px;width:100%}
+  .motion-internships[data-motion-mode=cinematic] .ledger-progress{width:100%;height:1px}
+  .cyber-contact[data-motion-mode=cinematic]{padding:104px 7% 30px;perspective:1800px}
+  .cyber-contact[data-motion-mode=cinematic] .contact-intro{margin-bottom:20px}
+  .cyber-contact[data-motion-mode=cinematic] .contact-console{overflow:visible;transform-style:preserve-3d}
+  .cyber-contact[data-motion-mode=cinematic] .console-body{transform-style:preserve-3d}
+  .cyber-contact[data-motion-mode=cinematic] .contact-mail,.cyber-contact[data-motion-mode=cinematic] .contact-networks{padding:26px 30px;background:var(--surface)}
+  .cyber-contact[data-motion-mode=cinematic] .console-bar{border-radius:5px 5px 0 0}
+  .cyber-contact[data-motion-mode=cinematic] .console-bottom{background:var(--raised);border-radius:0 0 5px 5px}
+}

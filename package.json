@@ -12,6 +12,7 @@
     "start": "next start",
     "build:vinext": "node scripts/run-framework.mjs build",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "typecheck": "tsc --noEmit",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {

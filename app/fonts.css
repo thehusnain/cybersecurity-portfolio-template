@@ -1,0 +1,24 @@
+@font-face{font-family:'Alvera Circle';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/alvera/alvera-circle-regular.woff2') format('woff2')}
+@font-face{font-family:'Alvera Circle';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/alvera/alvera-circle-bold.woff2') format('woff2')}
+@font-face{font-family:'MatrixType';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/matrixtype/matrixtype-regular.woff2') format('woff2')}
+@font-face{font-family:'MatrixType';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/matrixtype/matrixtype-bold.woff2') format('woff2')}
+@theme inline{--font-sans:var(--font-site);--font-mono:var(--font-site)}
+:root{--font-site:"MatrixType",sans-serif;--font-heading:"Alvera Circle",sans-serif}
+html,body{font-family:var(--font-site)}
+/* The dotted body face needs its real bold cut to stay legible at UI sizes. */
+body{font-weight:700}
+h1,h2,h3,.evidence-modal [data-slot=dialog-title]{font-family:var(--font-heading)}
+button,input,select,textarea{font-family:inherit}
+.hero-bottom b{font-weight:700}
+/* MatrixType has wider glyphs: keep the existing mobile composition inside its viewport. */
+@media(max-width:700px){
+  .hero h1{font-size:16vw}
+  .hero-note{font-size:13px;line-height:1.45}
+  .email-line>a{font-size:clamp(12px,3.6vw,18px)}
+}
+@media(max-width:360px){
+  .ctf-ribbon .ctr-top .brand{font-size:20px}
+  .ctf-ribbon .ctr-top nav{gap:10px;font-size:11px}
+  .ctf-ribbon .ctr-card-title{font-size:15px;overflow-wrap:anywhere}
+  .hero .hero-note{overflow-wrap:anywhere}
+}

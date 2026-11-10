@@ -12,6 +12,9 @@
 
 # testing
 /coverage
+/.playwright-mcp/
+/playwright-report/
+/test-results/
 
 # next.js
 /.next/
@@ -35,6 +38,7 @@ yarn-error.log*
 .vercel
 
 # typescript
+*.tsbuildinfo
 next-env.d.ts
 /dist/
 /.wrangler/
@@ -44,3 +48,7 @@ next-env.d.ts
 /.codex/
 /outputs/
 /work/
+
+# Local design prompts; keep implementation and DESIGN.md in the repository.
+/certificate-display.txt
+/pfp-hover-prompt.txt
